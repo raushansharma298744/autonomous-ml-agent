@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-24T20:36:16.830158",
+    "job_id": "5e522b91-628c-463c-ba92-2f0977e4d650",
+    "dataset_id": "9ddff37b-2def-4218-829f-e96200ffd191",
+    "dataset_name": "datasets\\6b80e351-bd04-49f9-8667-74727a3f6200.csv",
+    "target_column": "carat",
+    "problem_type": "regression"
+  },
+  "dataset_summary": {
+    "rows": 53940,
+    "columns": 11,
+    "numerical_features": 8,
+    "categorical_features": 3,
+    "missing_values": {
+      "Unnamed: 0": 0,
+      "carat": 0,
+      "cut": 0,
+      "color": 0,
+      "clarity": 0,
+      "depth": 0,
+      "table": 0,
+      "price": 0,
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "duplicate_rows": 0,
+    "target_analysis": {
+      "dtype": "float64",
+      "missing": 0,
+      "unique_values": 273,
+      "problem_type": "regression",
+      "target_stats": {
+        "mean": 0.7979397478680014,
+        "std": 0.4740112444054184,
+        "min": 0.2,
+        "max": 5.01,
+        "median": 0.7,
+        "skewness": 1.116645920812613,
+        "kurtosis": 1.2566353326079294
+      }
+    }
+  },
+  "preprocessing_performed": [
+    "Dropped 1 ID columns",
+    "Encoded 3 categorical features",
+    "Scaled 6 numerical features",
+    "No class weights"
+  ],
+  "eda_findings": [
+    "Outliers detected in 8 numerical columns (total: 8689)",
+    "Correlation analysis performed on 8 numerical features"
+  ],
+  "features_used": [],
+  "feature_engineering": [
+    "Log-transformed 22 skewed features",
+    "Created 0 interaction features",
+    "Extracted 0 datetime features",
+    "Dropped 24 redundant features"
+  ],
+  "models_tested": [
+    {
+      "model": "LinearRegression",
+      "baseline_metrics": {
+        "mae": 0.04264753432905051,
+        "mse": 0.005037937910853849,
+        "rmse": 0.07097843271624028,
+        "r2": 0.9778281979162626,
+        "residuals": {
+          "mean": 0.0005758132906281869,
+          "std": 0.07097609703208668,
+          "max": 1.711319580078125
+        },
+        "mape": 6.647545812794542
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "RandomForestRegressor",
+      "baseline_metrics": {
+        "mae": 0.009211199613327007,
+        "mse": 0.00028404742081726406,
+        "rmse": 0.01685370644152983,
+        "r2": 0.9987499164721367,
+        "residuals": {
+          "mean": -0.00013978295990262375,
+          "std": 0.01685312675859839,
+          "max": 0.4038000000000004
+        },
+        "mape": 1.1681597040976746
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "XGBRegressor",
+      "baseline_metrics": {
+        "mae": 0.010529128015151856,
+        "mse": 0.0006319492850927132,
+        "rmse": 0.025138601494369438,
+        "r2": 0.997218811600308,
+        "residuals": {
+          "mean": 8.800549643279294e-05,
+          "std": 0.02513844744858582,
+          "max": 0.9416556453704832
+        },
+        "mape": 1.2836775551504027
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "HistGradientBoostingRegressor",
+      "baseline_metrics": {
+        "mae": 0.011167656045878514,
+        "mse": 0.0007576354438323131,
+        "rmse": 0.027525178361498644,
+        "r2": 0.9966656708737747,
+        "residuals": {
+          "mean": 0.00018065198037608895,
+          "std": 0.02752458553174415,
+          "max": 0.9281638255821103
+        },
+        "mape": 1.3748790612252408
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    }
+  ],
+  "hyperparameter_tuning": [],
+  "experiment_comparison": [
+    {
+      "experiment_id": null,
+      "model": "LinearRegression",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.9778281979162626,
+        "rmse": 0.07097843271624028
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "RandomForestRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.9987499164721367,
+        "rmse": 0.01685370644152983
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "XGBRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.997218811600308,
+        "rmse": 0.025138601494369438
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "HistGradientBoostingRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.9966656708737747,
+        "rmse": 0.027525178361498644
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "RandomForestRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.7492293421687443,
+        "rmse": 0.2387065128381787
+      },
+      "duration": null
+    }
+  ],
+  "best_experiment": {
+    "id": null,
+    "model": "RandomForestRegressor",
+    "metrics": {
+      "mae": 0.009211199613327007,
+      "mse": 0.00028404742081726406,
+      "rmse": 0.01685370644152983,
+      "r2": 0.9987499164721367,
+      "residuals": {
+        "mean": -0.00013978295990262375,
+        "std": 0.01685312675859839,
+        "max": 0.4038000000000004
+      },
+      "mape": 1.1681597040976746
+    },
+    "hyperparameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": null,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": -1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "training_duration": null
+  },
+  "critic_findings": [
+    {
+      "status": "needs_improvement",
+      "issues": [
+        "High residual variance - predictions inconsistent"
+      ],
+      "recommended_actions": [
+        "feature_engineering"
+      ],
+      "primary_action": "feature_engineering",
+      "summary": "Model needs improvement. Key issues: High residual variance - predictions inconsistent. Recommended: feature_engineering."
+    }
+  ],
+  "improvements_performed": [],
+  "stopping_reason": "Improvement (0.0000) below threshold (0.005)",
+  "limitations": [
+    "Single train/test split used - cross-validation recommended for production deployment",
+    "No external validation dataset used - performance on unseen data unknown"
+  ],
+  "recommended_next_steps": [
+    "Implement model monitoring for prediction drift and data drift",
+    "Set up automated retraining pipeline with scheduled frequency",
+    "Add A/B testing framework for safe model updates",
+    "Collect feedback loop data for continuous improvement",
+    "Document model card with intended use cases and limitations"
+  ]
+}

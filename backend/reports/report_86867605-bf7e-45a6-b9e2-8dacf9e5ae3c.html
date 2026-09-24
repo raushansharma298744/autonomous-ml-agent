@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autonomous ML Engineer Agent - Final Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #333; }
+        h1 { color: #1e3a8a; border-bottom: 3px solid #3b82f6; padding-bottom: 10px; }
+        h2 { color: #1e40af; margin-top: 40px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+        h3 { color: #3730a3; }
+        .meta { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .metric { display: inline-block; background: #eff6ff; padding: 10px 20px; margin: 5px; border-radius: 6px; font-weight: 600; color: #1e40af; }
+        .finding { background: #fef3c7; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #f59e0b; }
+        .limitation { background: #fef2f2; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #ef4444; }
+        .step { background: #f0fdf4; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #22c55e; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f8fafc; font-weight: 600; }
+        .code { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: 'Monaco', 'Consolas', monospace; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Autonomous ML Engineer Agent - Final Report</h1>
+    
+    <div class="meta">
+        <strong>Job ID:</strong> 86867605-bf7e-45a6-b9e2-8dacf9e5ae3c<br>
+        <strong>Dataset:</strong> datasets\4480ed90-00be-4f35-a929-596cdb28d332.csv<br>
+        <strong>Target:</strong> Churn<br>
+        <strong>Problem Type:</strong> classification<br>
+        <strong>Generated:</strong> 2026-09-24T22:07:41.761354
+    </div>
+    
+    <h2>📊 Dataset Summary</h2>
+    <ul>
+        <li><strong>Rows:</strong> 7,043</li>
+        <li><strong>Columns:</strong> 21</li>
+        <li><strong>Numerical Features:</strong> 3</li>
+        <li><strong>Categorical Features:</strong> 18</li>
+        <li><strong>Duplicate Rows:</strong> 0</li>
+    </ul>
+    
+    <h2>🔧 Preprocessing Performed</h2>
+    <ul>
+        <li>Dropped 1 ID columns</li><li>Encoded 15 categorical features</li><li>Scaled 3 numerical features</li><li>No class weights</li>
+    </ul>
+    
+    <h2>📈 EDA Findings</h2>
+    <div class="finding">Target class 'No': 5174 samples (73.5%)</div><div class="finding">Target class 'Yes': 1869 samples (26.5%)</div><div class="finding">Outliers detected in 3 numerical columns (total: 1142)</div><div class="finding">Correlation analysis performed on 3 numerical features</div>
+    
+    <h2>🎯 Features Used</h2>
+    <ul>
+        
+    </ul>
+    
+    <h2>🏗️ Feature Engineering</h2>
+    <ul>
+        <li>Log-transformed 16 skewed features</li><li>Created 0 interaction features</li><li>Extracted 0 datetime features</li><li>Dropped 28 redundant features</li>
+    </ul>
+    
+    <h2>🧪 Models Tested</h2>
+    <table>
+        <tr><th>Model</th><th>Baseline</th><th>Tuned</th><th>Best Iteration</th></tr>
+        <tr><td>LogisticRegression</td><td>{'accuracy': 0.7963094393186657, 'precision': 0.7884765741594423, 'recall': 0.7963094393186657, 'f1': 0.7910853549007942, 'per_class': {'0': {'precision': 0.84375, 'recall': 0.8869565217391304, 'f1': 0.8648139425341498, 'support': 1035}, '1': {'precision': 0.6355140186915887, 'recall': 0.5454545454545454, 'f1': 0.5870503597122302, 'support': 374}}, 'confusion_matrix': [[918, 117], [170, 204]], 'confusion_matrix_labels': [0, 1], 'roc_auc': 0.8392415200599345, 'classification_report': {'0': {'precision': 0.84375, 'recall': 0.8869565217391304, 'f1-score': 0.8648139425341498, 'support': 1035.0}, '1': {'precision': 0.6355140186915887, 'recall': 0.5454545454545454, 'f1-score': 0.5870503597122302, 'support': 374.0}, 'accuracy': 0.7963094393186657, 'macro avg': {'precision': 0.7396320093457944, 'recall': 0.7162055335968379, 'f1-score': 0.72593215112319, 'support': 1409.0}, 'weighted avg': {'precision': 0.7884765741594423, 'recall': 0.7963094393186657, 'f1-score': 0.7910853549007942, 'support': 1409.0}}}</td><td>None</td><td>0</td></tr><tr><td>RandomForestClassifier</td><td>{'accuracy': 0.7856635911994322, 'precision': 0.7741673884796935, 'recall': 0.7856635911994322, 'f1': 0.7770788756180638, 'per_class': {'0': {'precision': 0.8292902066486972, 'recall': 0.8917874396135266, 'f1': 0.8594040968342644, 'support': 1035}, '1': {'precision': 0.6216216216216216, 'recall': 0.4919786096256685, 'f1': 0.5492537313432836, 'support': 374}}, 'confusion_matrix': [[923, 112], [190, 184]], 'confusion_matrix_labels': [0, 1], 'roc_auc': 0.8141323723165156, 'classification_report': {'0': {'precision': 0.8292902066486972, 'recall': 0.8917874396135266, 'f1-score': 0.8594040968342644, 'support': 1035.0}, '1': {'precision': 0.6216216216216216, 'recall': 0.4919786096256685, 'f1-score': 0.5492537313432836, 'support': 374.0}, 'accuracy': 0.7856635911994322, 'macro avg': {'precision': 0.7254559141351594, 'recall': 0.6918830246195975, 'f1-score': 0.7043289140887741, 'support': 1409.0}, 'weighted avg': {'precision': 0.7741673884796935, 'recall': 0.7856635911994322, 'f1-score': 0.7770788756180638, 'support': 1409.0}}}</td><td>None</td><td>0</td></tr><tr><td>ExtraTreesClassifier</td><td>{'accuracy': 0.7565649396735273, 'precision': 0.7464190281187991, 'recall': 0.7565649396735273, 'f1': 0.7503215217107054, 'per_class': {'0': {'precision': 0.8180147058823529, 'recall': 0.8599033816425121, 'f1': 0.83843617522374, 'support': 1035}, '1': {'precision': 0.5482866043613707, 'recall': 0.47058823529411764, 'f1': 0.5064748201438849, 'support': 374}}, 'confusion_matrix': [[890, 145], [198, 176]], 'confusion_matrix_labels': [0, 1], 'roc_auc': 0.7803456560489809, 'classification_report': {'0': {'precision': 0.8180147058823529, 'recall': 0.8599033816425121, 'f1-score': 0.83843617522374, 'support': 1035.0}, '1': {'precision': 0.5482866043613707, 'recall': 0.47058823529411764, 'f1-score': 0.5064748201438849, 'support': 374.0}, 'accuracy': 0.7565649396735273, 'macro avg': {'precision': 0.6831506551218618, 'recall': 0.6652458084683148, 'f1-score': 0.6724554976838124, 'support': 1409.0}, 'weighted avg': {'precision': 0.7464190281187991, 'recall': 0.7565649396735273, 'f1-score': 0.7503215217107054, 'support': 1409.0}}}</td><td>None</td><td>0</td></tr><tr><td>GradientBoostingClassifier</td><td>{'accuracy': 0.8026969481902059, 'precision': 0.7921287374408671, 'recall': 0.8026969481902059, 'f1': 0.793566272514856, 'per_class': {'0': {'precision': 0.8370436331255565, 'recall': 0.9082125603864735, 'f1': 0.871177015755329, 'support': 1035}, '1': {'precision': 0.6678321678321678, 'recall': 0.5106951871657754, 'f1': 0.5787878787878787, 'support': 374}}, 'confusion_matrix': [[940, 95], [183, 191]], 'confusion_matrix_labels': [0, 1], 'roc_auc': 0.8435273450618719, 'classification_report': {'0': {'precision': 0.8370436331255565, 'recall': 0.9082125603864735, 'f1-score': 0.871177015755329, 'support': 1035.0}, '1': {'precision': 0.6678321678321678, 'recall': 0.5106951871657754, 'f1-score': 0.5787878787878787, 'support': 374.0}, 'accuracy': 0.8026969481902059, 'macro avg': {'precision': 0.7524379004788622, 'recall': 0.7094538737761245, 'f1-score': 0.7249824472716039, 'support': 1409.0}, 'weighted avg': {'precision': 0.7921287374408671, 'recall': 0.8026969481902059, 'f1-score': 0.793566272514856, 'support': 1409.0}}}</td><td>None</td><td>0</td></tr><tr><td>XGBClassifier</td><td>{'accuracy': 0.7792760823278921, 'precision': 0.773501060211744, 'recall': 0.7792760823278921, 'f1': 0.775914238832568, 'per_class': {'0': {'precision': 0.8389513108614233, 'recall': 0.8657004830917875, 'f1': 0.8521160247265811, 'support': 1035}, '1': {'precision': 0.592375366568915, 'recall': 0.5401069518716578, 'f1': 0.5650349650349651, 'support': 374}}, 'confusion_matrix': [[896, 139], [172, 202]], 'confusion_matrix_labels': [0, 1], 'roc_auc': 0.8105802268206361, 'classification_report': {'0': {'precision': 0.8389513108614233, 'recall': 0.8657004830917875, 'f1-score': 0.8521160247265811, 'support': 1035.0}, '1': {'precision': 0.592375366568915, 'recall': 0.5401069518716578, 'f1-score': 0.5650349650349651, 'support': 374.0}, 'accuracy': 0.7792760823278921, 'macro avg': {'precision': 0.7156633387151692, 'recall': 0.7029037174817226, 'f1-score': 0.7085754948807731, 'support': 1409.0}, 'weighted avg': {'precision': 0.773501060211744, 'recall': 0.7792760823278921, 'f1-score': 0.775914238832568, 'support': 1409.0}}}</td><td>None</td><td>0</td></tr>
+    </table>
+    
+    <h2>🏆 Best Experiment</h2>
+    <div class="metric">Model: GradientBoostingClassifier</div>
+    <div class="metric">F1 Score: 0.793566272514856</div>
+    <div class="metric">Accuracy: 0.8026969481902059</div>
+    <div class="metric">Training Time: N/As</div>
+    
+    <h2>⚖️ Critic Findings</h2>
+    <div class="finding"><strong>INFO:</strong> </div>
+    
+    <h2>🚀 Improvements Performed</h2>
+    <ul>
+        
+    </ul>
+    
+    <h2>🛑 Stopping Reason</h2>
+    <p>Critic: performance satisfactory</p>
+    
+    <h2>⚠️ Limitations</h2>
+    <div class="limitation">Moderate dataset size (7043 rows) - consider more data for production</div><div class="limitation">Single train/test split used - cross-validation recommended for production deployment</div><div class="limitation">No external validation dataset used - performance on unseen data unknown</div><div class="limitation">Tree-based models may overfit on small datasets - regularization important</div>
+    
+    <h2>🎯 Recommended Next Steps</h2>
+    <div class="step">Implement model monitoring for prediction drift and data drift</div><div class="step">Set up automated retraining pipeline with scheduled frequency</div><div class="step">Add A/B testing framework for safe model updates</div><div class="step">Collect feedback loop data for continuous improvement</div><div class="step">Document model card with intended use cases and limitations</div>
+    
+</body>
+</html>

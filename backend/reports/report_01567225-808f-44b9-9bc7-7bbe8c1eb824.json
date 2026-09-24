@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-24T20:17:30.217849",
+    "job_id": "01567225-808f-44b9-9bc7-7bbe8c1eb824",
+    "dataset_id": "bf38810c-781c-4563-94d9-87a5db1117c4",
+    "dataset_name": "datasets\\f0066173-63d4-4ddf-b80a-363ba9a8d9dc.csv",
+    "target_column": "Rent",
+    "problem_type": "regression"
+  },
+  "dataset_summary": {
+    "rows": 4746,
+    "columns": 12,
+    "numerical_features": 4,
+    "categorical_features": 8,
+    "missing_values": {
+      "Posted On": 0,
+      "BHK": 0,
+      "Rent": 0,
+      "Size": 0,
+      "Floor": 0,
+      "Area Type": 0,
+      "Area Locality": 0,
+      "City": 0,
+      "Furnishing Status": 0,
+      "Tenant Preferred": 0,
+      "Bathroom": 0,
+      "Point of Contact": 0
+    },
+    "duplicate_rows": 0,
+    "target_analysis": {
+      "dtype": "int64",
+      "missing": 0,
+      "unique_values": 243,
+      "problem_type": "regression",
+      "target_stats": {
+        "mean": 34993.45132743363,
+        "std": 78106.4129373483,
+        "min": 1200.0,
+        "max": 3500000.0,
+        "median": 16000.0,
+        "skewness": 21.409942283288803,
+        "kurtosis": 841.1080672214921
+      }
+    }
+  },
+  "preprocessing_performed": [
+    "No ID columns dropped",
+    "Encoded 5 categorical features",
+    "Scaled 3 numerical features",
+    "No class weights"
+  ],
+  "eda_findings": [
+    "Outliers detected in 4 numerical columns (total: 982)",
+    "Correlation analysis performed on 4 numerical features"
+  ],
+  "features_used": [],
+  "feature_engineering": [
+    "Log-transformed 14 skewed features",
+    "Created 0 interaction features",
+    "Extracted 0 datetime features",
+    "Dropped 16 redundant features"
+  ],
+  "models_tested": [
+    {
+      "model": "LinearRegression",
+      "baseline_metrics": {
+        "mae": 22232.630044008445,
+        "mse": 1911180916.2022085,
+        "rmse": 43717.05520963424,
+        "r2": 0.5204521815850236,
+        "residuals": {
+          "mean": -585.1709713043888,
+          "std": 43713.138655746865,
+          "max": 936008.5802384331
+        },
+        "mape": 114.76714400852288
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "RandomForestRegressor",
+      "baseline_metrics": {
+        "mae": 14087.755864422517,
+        "mse": 2046882576.65507,
+        "rmse": 45242.48641106134,
+        "r2": 0.4864023254600608,
+        "residuals": {
+          "mean": -1972.3274482550516,
+          "std": 45199.474566547,
+          "max": 689900.0
+        },
+        "mape": 40.443543012241285
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "GradientBoostingRegressor",
+      "baseline_metrics": {
+        "mae": 12544.304453613064,
+        "mse": 1364014889.8444602,
+        "rmse": 36932.572207259815,
+        "r2": 0.6577454498602535,
+        "residuals": {
+          "mean": -584.4166193747626,
+          "std": 36927.94804832052,
+          "max": 645808.9759353265
+        },
+        "mape": 37.791391184568354
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    },
+    {
+      "model": "XGBRegressor",
+      "baseline_metrics": {
+        "mae": 18956.441615439966,
+        "mse": 17019170429.011276,
+        "rmse": 130457.5426298199,
+        "r2": -3.270399570465088,
+        "residuals": {
+          "mean": -5925.226228926809,
+          "std": 130322.91480452436,
+          "max": 3388498.25
+        },
+        "mape": 48.40702778629522
+      },
+      "tuned_metrics": null,
+      "best_iteration": 0
+    }
+  ],
+  "hyperparameter_tuning": [],
+  "experiment_comparison": [
+    {
+      "experiment_id": null,
+      "model": "LinearRegression",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.5204521815850236,
+        "rmse": 43717.05520963424
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "RandomForestRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.4864023254600608,
+        "rmse": 45242.48641106134
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "GradientBoostingRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": 0.6577454498602535,
+        "rmse": 36932.572207259815
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "XGBRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": -3.270399570465088,
+        "rmse": 130457.5426298199
+      },
+      "duration": null
+    },
+    {
+      "experiment_id": null,
+      "model": "GradientBoostingRegressor",
+      "iteration": 0,
+      "parent_experiment": null,
+      "metrics": {
+        "accuracy": null,
+        "f1": null,
+        "precision": null,
+        "recall": null,
+        "roc_auc": null,
+        "r2": -0.17197509010710865,
+        "rmse": 68343.01448067122
+      },
+      "duration": null
+    }
+  ],
+  "best_experiment": {
+    "id": null,
+    "model": "GradientBoostingRegressor",
+    "metrics": {
+      "mae": 12544.304453613064,
+      "mse": 1364014889.8444602,
+      "rmse": 36932.572207259815,
+      "r2": 0.6577454498602535,
+      "residuals": {
+        "mean": -584.4166193747626,
+        "std": 36927.94804832052,
+        "max": 645808.9759353265
+      },
+      "mape": 37.791391184568354
+    },
+    "hyperparameters": {
+      "alpha": 0.9,
+      "ccp_alpha": 0.0,
+      "criterion": "friedman_mse",
+      "init": null,
+      "learning_rate": 0.1,
+      "loss": "squared_error",
+      "max_depth": 3,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "n_estimators": 100,
+      "n_iter_no_change": null,
+      "random_state": 42,
+      "subsample": 1.0,
+      "tol": 0.0001,
+      "validation_fraction": 0.1,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "training_duration": null
+  },
+  "critic_findings": [
+    {
+      "status": "needs_improvement",
+      "issues": [
+        "Moderate R\u00b2 (0.658) - room for improvement",
+        "High residual variance - predictions inconsistent"
+      ],
+      "recommended_actions": [
+        "hyperparameter_tuning",
+        "feature_engineering"
+      ],
+      "primary_action": "hyperparameter_tuning",
+      "summary": "Model needs improvement. Key issues: Moderate R\u00b2 (0.658) - room for improvement; High residual variance - predictions inconsistent. Recommended: hyperparameter_tuning."
+    }
+  ],
+  "improvements_performed": [],
+  "stopping_reason": "Improvement (0.0000) below threshold (0.005)",
+  "limitations": [
+    "Moderate dataset size (4746 rows) - consider more data for production",
+    "Single train/test split used - cross-validation recommended for production deployment",
+    "No external validation dataset used - performance on unseen data unknown",
+    "Tree-based models may overfit on small datasets - regularization important"
+  ],
+  "recommended_next_steps": [
+    "Implement model monitoring for prediction drift and data drift",
+    "Set up automated retraining pipeline with scheduled frequency",
+    "Add A/B testing framework for safe model updates",
+    "Collect feedback loop data for continuous improvement",
+    "Document model card with intended use cases and limitations"
+  ]
+}

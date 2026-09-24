@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autonomous ML Engineer Agent - Final Report</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #333; }
+        h1 { color: #1e3a8a; border-bottom: 3px solid #3b82f6; padding-bottom: 10px; }
+        h2 { color: #1e40af; margin-top: 40px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+        h3 { color: #3730a3; }
+        .meta { background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .metric { display: inline-block; background: #eff6ff; padding: 10px 20px; margin: 5px; border-radius: 6px; font-weight: 600; color: #1e40af; }
+        .finding { background: #fef3c7; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #f59e0b; }
+        .limitation { background: #fef2f2; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #ef4444; }
+        .step { background: #f0fdf4; padding: 12px; margin: 8px 0; border-radius: 6px; border-left: 4px solid #22c55e; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f8fafc; font-weight: 600; }
+        .code { background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: 'Monaco', 'Consolas', monospace; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Autonomous ML Engineer Agent - Final Report</h1>
+    
+    <div class="meta">
+        <strong>Job ID:</strong> 01567225-808f-44b9-9bc7-7bbe8c1eb824<br>
+        <strong>Dataset:</strong> datasets\f0066173-63d4-4ddf-b80a-363ba9a8d9dc.csv<br>
+        <strong>Target:</strong> Rent<br>
+        <strong>Problem Type:</strong> regression<br>
+        <strong>Generated:</strong> 2026-09-24T20:17:30.217849
+    </div>
+    
+    <h2>📊 Dataset Summary</h2>
+    <ul>
+        <li><strong>Rows:</strong> 4,746</li>
+        <li><strong>Columns:</strong> 12</li>
+        <li><strong>Numerical Features:</strong> 4</li>
+        <li><strong>Categorical Features:</strong> 8</li>
+        <li><strong>Duplicate Rows:</strong> 0</li>
+    </ul>
+    
+    <h2>🔧 Preprocessing Performed</h2>
+    <ul>
+        <li>No ID columns dropped</li><li>Encoded 5 categorical features</li><li>Scaled 3 numerical features</li><li>No class weights</li>
+    </ul>
+    
+    <h2>📈 EDA Findings</h2>
+    <div class="finding">Outliers detected in 4 numerical columns (total: 982)</div><div class="finding">Correlation analysis performed on 4 numerical features</div>
+    
+    <h2>🎯 Features Used</h2>
+    <ul>
+        
+    </ul>
+    
+    <h2>🏗️ Feature Engineering</h2>
+    <ul>
+        <li>Log-transformed 14 skewed features</li><li>Created 0 interaction features</li><li>Extracted 0 datetime features</li><li>Dropped 16 redundant features</li>
+    </ul>
+    
+    <h2>🧪 Models Tested</h2>
+    <table>
+        <tr><th>Model</th><th>Baseline</th><th>Tuned</th><th>Best Iteration</th></tr>
+        <tr><td>LinearRegression</td><td>{'mae': 22232.630044008445, 'mse': 1911180916.2022085, 'rmse': 43717.05520963424, 'r2': 0.5204521815850236, 'residuals': {'mean': -585.1709713043888, 'std': 43713.138655746865, 'max': 936008.5802384331}, 'mape': 114.76714400852288}</td><td>None</td><td>0</td></tr><tr><td>RandomForestRegressor</td><td>{'mae': 14087.755864422517, 'mse': 2046882576.65507, 'rmse': 45242.48641106134, 'r2': 0.4864023254600608, 'residuals': {'mean': -1972.3274482550516, 'std': 45199.474566547, 'max': 689900.0}, 'mape': 40.443543012241285}</td><td>None</td><td>0</td></tr><tr><td>GradientBoostingRegressor</td><td>{'mae': 12544.304453613064, 'mse': 1364014889.8444602, 'rmse': 36932.572207259815, 'r2': 0.6577454498602535, 'residuals': {'mean': -584.4166193747626, 'std': 36927.94804832052, 'max': 645808.9759353265}, 'mape': 37.791391184568354}</td><td>None</td><td>0</td></tr><tr><td>XGBRegressor</td><td>{'mae': 18956.441615439966, 'mse': 17019170429.011276, 'rmse': 130457.5426298199, 'r2': -3.270399570465088, 'residuals': {'mean': -5925.226228926809, 'std': 130322.91480452436, 'max': 3388498.25}, 'mape': 48.40702778629522}</td><td>None</td><td>0</td></tr>
+    </table>
+    
+    <h2>🏆 Best Experiment</h2>
+    <div class="metric">Model: GradientBoostingRegressor</div>
+    <div class="metric">F1 Score: N/A</div>
+    <div class="metric">Accuracy: N/A</div>
+    <div class="metric">Training Time: N/As</div>
+    
+    <h2>⚖️ Critic Findings</h2>
+    <div class="finding"><strong>INFO:</strong> </div>
+    
+    <h2>🚀 Improvements Performed</h2>
+    <ul>
+        
+    </ul>
+    
+    <h2>🛑 Stopping Reason</h2>
+    <p>Improvement (0.0000) below threshold (0.005)</p>
+    
+    <h2>⚠️ Limitations</h2>
+    <div class="limitation">Moderate dataset size (4746 rows) - consider more data for production</div><div class="limitation">Single train/test split used - cross-validation recommended for production deployment</div><div class="limitation">No external validation dataset used - performance on unseen data unknown</div><div class="limitation">Tree-based models may overfit on small datasets - regularization important</div>
+    
+    <h2>🎯 Recommended Next Steps</h2>
+    <div class="step">Implement model monitoring for prediction drift and data drift</div><div class="step">Set up automated retraining pipeline with scheduled frequency</div><div class="step">Add A/B testing framework for safe model updates</div><div class="step">Collect feedback loop data for continuous improvement</div><div class="step">Document model card with intended use cases and limitations</div>
+    
+</body>
+</html>
