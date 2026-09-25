@@ -157,7 +157,7 @@ def plot_feature_target_relationship(
         else:
             # Stacked bar for categorical
             crosstab = pd.crosstab(df[feature], df[target], normalize='index')
-            crosstab.plot(kind='bar', stacked=True, ax=ax, colormap='husl')
+            crosstab.plot(kind='bar', stacked=True, ax=ax, colormap='viridis')
             ax.set_title(f"{target} distribution by {feature}")
             ax.legend(title=target, bbox_to_anchor=(1.05, 1), loc='upper left')
     else:
