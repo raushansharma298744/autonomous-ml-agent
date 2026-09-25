@@ -35,12 +35,14 @@ export function AgentExecution() {
 
   useEffect(() => {
     if (!jobId) return
-    ws.current = new WebSocket(`ws://localhost:8000/api/v1/agent/ws/${jobId}`)
+    const wsUrl = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(/^http/, 'ws');
+    ws.current = new WebSocket(`${wsUrl}/api/v1/agent/ws/${jobId}`)
     
     ws.current.onopen = () => {
       console.log('WebSocket connected')
       setIsRunning(true)
-      fetch(`http://localhost:8000/api/v1/agent/jobs/${jobId}/run`, { method: 'POST' })
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+      fetch(`${apiUrl}/api/v1/agent/jobs/${jobId}/run`, { method: 'POST' })
     }
 
     ws.current.onmessage = (event) => {

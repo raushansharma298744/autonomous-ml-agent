@@ -57,7 +57,8 @@ export function UploadDataset() {
     formData.append('problem_type', problemType)
 
     try {
-      const response = await fetch('/api/v1/datasets/upload', {
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${apiUrl}/api/v1/datasets/upload`, {
         method: 'POST',
         body: formData,
       })

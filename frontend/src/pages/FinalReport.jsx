@@ -11,7 +11,8 @@ export function FinalReport() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/v1/reports/${jobId}`)
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    fetch(`${apiUrl}/api/v1/reports/${jobId}`)
       .then(res => {
         if (!res.ok) throw new Error('Report not found or not generated yet.')
         return res.json()
@@ -116,7 +117,7 @@ export function FinalReport() {
             <p className="text-gray-600">Job: {jobId}</p>
           </div>
         </div>
-        <a href={`http://localhost:8000/api/v1/reports/${jobId}`} target="_blank" rel="noreferrer" className={btnSecondaryClass}>
+        <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/api/v1/reports/${jobId}`} target="_blank" rel="noreferrer" className={btnSecondaryClass}>
           <Download className="w-4 h-4" />
           Download JSON
         </a>
